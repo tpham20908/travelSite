@@ -12,7 +12,7 @@ gulp.task('styles', function() {
   // handle error gracefully
   .on('error', function(errorInfo) {
     // print out errorInfo for debugging purpose
-    console.log(errorInfo);
+    console.log(errorInfo.toString());
     // stop acting with error
     this.emit('end');
   })
