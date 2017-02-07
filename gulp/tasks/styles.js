@@ -10,7 +10,10 @@ gulp.task('styles', function() {
   // pipe *.css in a filter postcss
   .pipe(postcss([cssImport, cssNested, cssVars, autoprefixer]))
   // handle error gracefully
-  .on('error', function() {
+  .on('error', function(errorInfo) {
+    // print out errorInfo for debugging purpose
+    console.log(errorInfo);
+    // stop acting with error
     this.emit('end');
   })
   .pipe(gulp.dest('app/temp/css'));
