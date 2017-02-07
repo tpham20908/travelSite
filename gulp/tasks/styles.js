@@ -7,6 +7,11 @@ cssImport = require('postcss-import');
 
 gulp.task('styles', function() {
   return gulp.src('app/assets/css/styles.css')
+  // pipe *.css in a filter postcss
   .pipe(postcss([cssImport, cssNested, cssVars, autoprefixer]))
+  // handle error gracefully
+  .on('error', function() {
+    this.emit('end');
+  })
   .pipe(gulp.dest('app/temp/css'));
 });
