@@ -486,12 +486,42 @@ img {
 
 .large-hero__title {
   font-weight: 300;
-  color: #357;
+  color: #3d5d7d;
   font-size: 4.8rem;
+  margin: 0;
 }
 
 .large-hero__subtitle {
   font-weight: 300;
-  color: #357;
+  color: #3d5d7d;
   font-size: 3rem;
+  margin: 0;
+}
+
+.large-hero__description {
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 100;
+  max-width: 30rem;
+  margin: 0 auto;
+  text-shadow: 1.5px 1.5px .5px rgba(0, 0, 0, .3);
+}
+
+.btn {
+  background-color: #3d5d7d;
+  color: white;
+  text-decoration: none;
+  padding: .7rem 1.2rem;
+  display: inline-block;
+}
+
+.btn__orange {
+  background-color: #d59545;
+}
+
+.btn__large {
+  padding: 1rem 1.8rem;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, .3);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 }
