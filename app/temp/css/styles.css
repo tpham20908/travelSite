@@ -487,8 +487,15 @@ img {
 .large-hero__title {
   font-weight: 300;
   color: #3d5d7d;
-  font-size: 4.8rem;
   margin: 0;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 530px) {
+
+  .large-hero__title {
+    font-size: 4.8rem;
+  }
 }
 
 .large-hero__subtitle {

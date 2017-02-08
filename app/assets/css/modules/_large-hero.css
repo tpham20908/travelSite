@@ -2,7 +2,6 @@
   position: relative;
 
   &__text-content {
-    color: $linhtinh;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -14,8 +13,8 @@
   &__title {
     font-weight: 300;
     color: $mainBlue;
-    font-size: 4.8rem;
     margin: 0;
+    font-size: 4.8rem;
   }
 
   &__subtitle {
