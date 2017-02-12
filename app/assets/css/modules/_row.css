@@ -1,0 +1,23 @@
+.row {
+  overflow: auto;
+
+  &__gutter {
+    margin-right: -65px;
+  }
+
+  &__gutter > div {
+    padding-right: 65px;
+  }
+
+  @mixin atMedium {
+    &__medium-4 {
+      width: 33.33%;
+      float: left;
+    }
+
+    &__medium-8 {
+      width: 66.67%;
+      float: left;
+    }
+  }
+}
