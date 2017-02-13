@@ -15,9 +15,17 @@
       float: left;
     }
 
+    &__medium-4-wider {
+      width: 36%;
+    }
+
     &__medium-8 {
       width: 66.67%;
       float: left;
+    }
+
+    &__medium-8-narrower {
+      width: 64%;
     }
   }
 }
