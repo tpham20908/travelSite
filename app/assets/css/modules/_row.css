@@ -54,9 +54,44 @@
     }
   }
 
+  @mixin atLarge {
+    &__large-4 {
+      width: 33.33%;
+      float: left;
+    }
+
+    &__large-4-wider {
+      width: 36%;
+    }
+
+    &__large-6 {
+      width: 50%;
+      float: left;
+    }
+
+    &__large-8 {
+      width: 66.67%;
+      float: left;
+    }
+
+    &__large-8-narrower {
+      width: 64%;
+    }
+  }
+
   /*Apply the same height for 3 columns in Testimonial*/
   &__equal-height-at-medium {
     @mixin atMedium {
+      display: flex;
+    }
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
+
+  &__equal-height-at-large {
+    @mixin atLarge {
       display: flex;
     }
     & > div {

@@ -15,6 +15,15 @@
     }
   }
 
+  &__no-padding-until-large {
+    padding-right: 0;
+    padding-left: 0;
+    @mixin atLarge {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
+  }
+
   &__medium {
     max-width: 978px;
   }
