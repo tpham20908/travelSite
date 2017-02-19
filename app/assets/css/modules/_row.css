@@ -1,5 +1,9 @@
 .row {
-  overflow: auto;
+  /*overflow: auto;*/
+
+  &__t-padding {
+    padding-top: 80px;
+  }
 
   &__gutter {
     margin-right: -65px;
@@ -9,12 +13,20 @@
     margin-right: -90px;
   }
 
+  &__gutter-small {
+    margin-right: -45px;
+  }
+
   &__gutter > div {
     padding-right: 65px;
   }
 
   &__gutter-large > div {
     padding-right: 90px;
+  }
+
+  &__gutter-small > div {
+    padding-right: 45px;
   }
 
   @mixin atMedium {
@@ -39,6 +51,17 @@
 
     &__medium-8-narrower {
       width: 64%;
+    }
+  }
+
+  /*Apply the same height for 3 columns in Testimonial*/
+  &__equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+    & > div {
+      float: none;
+      display: flex;
     }
   }
 }
