@@ -1,12 +1,20 @@
 .page-section {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0 0 0;
 
-  @mixin atSmall {
+  @mixin atLarge {
     padding: 4.5rem 0;
   }
 
   &__blue {
     background-color: $mainBlue;
     color: #FFF;
+  }
+
+  &__testimonials {
+    background-color: $bgTestimonial;
+    @mixin atLarge {
+      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+      background-size: cover;
+    }
   }
 }
