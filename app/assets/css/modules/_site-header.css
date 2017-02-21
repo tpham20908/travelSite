@@ -1,0 +1,18 @@
+.site-header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background: rgba(62, 94, 126, .3);
+  padding: 10px 0;
+
+  &__btn-container {
+    float: right;
+  }
+
+  &__logo {
+    position: absolute;
+    background-color: $mainBlue;
+    padding: 1.5rem 2.2rem;
+    top: 0;
+  }
+}

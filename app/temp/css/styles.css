@@ -1062,3 +1062,48 @@ a {
     margin-right: 1.5rem;
   }
 }
+
+.site-header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background: rgba(62, 94, 126, .3);
+  padding: 10px 0;
+}
+
+.site-header__btn-container {
+  float: right;
+}
+
+.site-header__logo {
+  position: absolute;
+  background-color: #3d5d7d;
+  padding: 1.5rem 2.2rem;
+  top: 0;
+}
+
+.primary-nav {
+
+  margin: 11px 0;
+}
+
+.primary-nav__pull-right {
+  float: right;
+}
+
+.primary-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav li {
+  list-style: none;
+  float: left;
+  margin-right: 1.25rem;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
