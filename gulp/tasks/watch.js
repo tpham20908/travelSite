@@ -10,14 +10,25 @@ gulp.task('watch', function() {
       baseDir: "app"
     }
   });
+
   watch('./app/index.html', function() {
     browserSync.reload();
   });
+
   watch('./app/assets/css/**/*.css', function() {
     gulp.start('cssInject');
   });
+
+  watch('./app/assets/script/**/*.js', function() {
+    gulp.start('scriptsRefresh');
+  });
+
 });
 
 gulp.task('cssInject', ['styles'], function() {
   return gulp.src('./app/temp/css/styles.css').pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+  browserSync.reload();
 });

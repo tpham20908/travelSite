@@ -2,11 +2,21 @@
   width: 100%;
   position: absolute;
   z-index: 1;
-  background: rgba(62, 94, 126, .3);
   padding: 10px 0;
+  transition: background-color .3s ease-out;
+
+  &__is-expanded {
+    background-color: rgba(62, 94, 126, .55);
+  }
+
+  @mixin atMedium {
+    background-color: rgba(62, 94, 126, .3);
+  }
 
   &__btn-container {
-    float: right;
+    @mixin atMedium {
+      float: right;
+    }
   }
 
   &__logo {
@@ -14,5 +24,103 @@
     background-color: $mainBlue;
     padding: 1.5rem 2.2rem;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(.8);
+    transform-origin: 50% 0%;
+
+    @mixin atMedium {
+      left: auto;
+      transform: translateX(0);
+    }
+  }
+
+  &__logo-graphic {
+    text-indent: -9999px;
+  }
+
+  &__menu-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 4px;
+      background-color: white;
+      transform-origin: 0 4px;
+      transition: transform .3s ease-out;
+    }
+
+    &__middle {
+      position: absolute;
+      top: 10.5px;
+      left: 0;
+      width: 25px;
+      height: 4px;
+      background-color: white;
+      transform-origin: 0 50%;
+      transition: all .3s ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: 0;
+      width: 25px;
+      height: 4px;
+      background-color: white;
+      transform-origin: 0 0;
+      transition: transform .3s ease-out;
+    }
+
+    @mixin atMedium {
+      display: none;
+    }
+
+    &__close-x {
+      &::before {
+        transform: rotate(45deg) scaleX(1.13);
+      }
+
+      .site-header__menu-icon__middle {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      &::after {
+        transform: rotate(-45deg) scaleX(1.13);
+      }
+    }
+  }
+
+  &__menu-content {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    position: relative;
+    z-index: -2;
+    padding-top: 90px;
+    text-align: center;
+
+    @mixin atMedium {
+      opacity: 1;
+      z-index: 1;
+      padding-top: 0;
+      transform: scale(1);
+    }
+
+    &__is-visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
+    }
   }
 }
